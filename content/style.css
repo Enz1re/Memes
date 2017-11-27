@@ -1,0 +1,91 @@
+@font-face {
+	font-family: "Fira Sans";
+	src: url("fonts/FiraSans/FiraSans-Regular.ttf");
+	font-weight: normal;
+	font-style: normal;
+}
+
+html {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+	font-family: "Fira Sans" !important;
+	font-size: 20px !important;
+	color: white !important;
+    background: url(img/background.gif) no-repeat; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+ol, ul {
+	list-style: none;
+	overflow: hidden;
+}
+
+li {
+	float: left;
+}
+
+img.inner-image {
+	width: 15em;
+	height: 10em;
+	top: 1.5em;
+	right: 1.5em;
+	position: absolute;
+}
+
+img.outer-image {
+	width: 18em;
+	height: 13em;
+}
+
+.info-container {
+	display: block;
+	background-color: rgba(22, 22, 22, 0.8);
+	margin: 4em 0;
+	padding: 1em 1em;
+	line-height: 1.6em;
+	border-radius: 1em;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.meme-container {
+	margin: 1.44em;
+}
+
+.meme-window {
+	margin: 1em;
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+	cursor: pointer;
+}
+
+li.active a.ng-binding {
+  	color: #ffffff !important;
+	background-color: rgba(22, 22, 22, 0.8) !important;
+	text-decoration: none;
+}
+
+li a.ng-binding {
+  	color: #ffffff;
+  	background-color: rgba(0, 0, 0, 0.2);
+  	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black !important;
+	text-decoration: none;
+}
+
+.tab-container {
+	border-style: solid;
+	border-color: #dcdcdc;
+	border-width: 0px 1px 1px 1px;
+	background-color: #8CBEB2;
+	padding: 15px;
+}
+
+.xtraSpace {
+	margin: 20px 20px;
+}
