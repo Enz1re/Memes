@@ -1,5 +1,5 @@
 define(function () {
-    return ["$scope", function($scope, memesService) {
+    return ["$scope", function($scope) {
         
     }];
 });

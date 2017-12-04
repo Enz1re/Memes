@@ -4,13 +4,13 @@ define(function () {
 
         $scope.listing = {
             showMemes: true,
-            showTextMeme: false,
+            showChosenMeme: false
         };
 
         $scope.onMemeClick = function(meme) {
             $scope.chosenMeme = meme;
             $scope.listing.showMemes = false;
-            $scope.listing.showTextMeme = true;
+            $scope.listing.showChosenMeme = true;
         }
 
         memesService.getAllTextMemes().then(memes => {

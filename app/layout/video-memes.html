@@ -1,0 +1,33 @@
+<div class="meme-container">
+	<ul ng-if="listing.showMemes">
+		<li ng-repeat="meme in memes">
+			<div class="meme-window" ng-click="onMemeClick(meme)" uib-popover="{{meme.desc}}" popover-trigger="'mouseenter'" popover-placement="'right'">
+				<img class="outer-image" src="content/img/picframe.png">
+				<img class="inner-image" ng-src="{{meme.thumb}}" />
+			</div>
+		</li>
+	</ul>
+	<div class="info-container" ng-if="listing.showChosenMeme">
+		<a href="" ng-click="listing.showMemes = true; listing.showChosenMeme = false;">Назад</a>
+		<p></p>
+		<h2>{{chosenMeme.desc}}</h2>
+		<div class="orig-vid">
+			<iframe width="500" height="300" ng-src="{{trustAsResourceUrl(chosenMeme.src_url)}}" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+		</div>
+		<p>Краткое описание</p>
+		<div>{{chosenMeme.body}}</div>
+		<p>Видео-пародии:</p>
+		<div>
+			<div>
+				<ul>
+					<li ng-repeat="vid in chosenMeme.vids">
+						<div class="meme-container">
+							<iframe width="500" height="300" ng-src="{{trustAsResourceUrl(vid)}}" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen>
+							</iframe>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

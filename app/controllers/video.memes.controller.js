@@ -1,16 +1,18 @@
 define(function () {
-    return ["$scope", "memesService", function($scope, memesService) {
+    return ["$scope", "$sce", "memesService", function($scope, $sce, memesService) {
         $scope.chosenMeme = {};
+
+        $scope.trustAsResourceUrl = $sce.trustAsResourceUrl;
 
         $scope.listing = {
             showMemes: true,
-            showVideoMeme: false
+            showChosenMeme: false
         };
 
         $scope.onMemeClick = function(meme) {
             $scope.chosenMeme = meme;
             $scope.listing.showMemes = false;
-            $scope.listing.showVideoMeme = true;
+            $scope.listing.showChosenMeme = true;
         }
 
         memesService.getAllVideoMemes().then(memes => {
