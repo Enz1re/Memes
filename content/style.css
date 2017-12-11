@@ -51,9 +51,9 @@ img.outer-image {
 	cursor: pointer;
 }
 
-@media screen (max-width: 1024) {
-	.meme-container {
-		margin: 1;
+@media (max-aspect-ratio: 4/3) {
+	.meme-window {
+		margin: 0.44em;
 	}
 }
 

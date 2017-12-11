@@ -1,9 +1,11 @@
 <div class="meme-container">
 	<ul ng-if="listing.showMemes">
 		<li ng-repeat="meme in memes">
-			<div class="meme-window" ng-click="onMemeClick(meme)" uib-popover="{{meme.desc}}" popover-trigger="'mouseenter'" popover-placement="'right'">
-				<img class="outer-image" src="content/img/picframe.png">
-				<img class="inner-image" ng-src="{{meme.thumb}}" />
+			<div>
+				<div class="meme-window" ng-click="onMemeClick(meme)">
+					<img class="outer-image" src="content/img/picframe.png">
+					<img class="inner-image" ng-src="{{meme.thumb}}" title="{{meme.desc}}" />
+				</div>
 			</div>
 		</li>
 	</ul>
